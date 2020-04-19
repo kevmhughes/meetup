@@ -84,7 +84,7 @@ describe('<Event /> component', () => {
             EventWrapper.find('.details-btn').simulate('click');
             expect(EventWrapper.find('showDetails')).toHaveLength(0);
         });
-
+        
         test('render enough information', () => {
           expect(EventWrapper.find('.event')).toHaveLength(1);
           expect(EventWrapper.find('.time')).toHaveLength(1);
