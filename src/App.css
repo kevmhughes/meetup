@@ -1,6 +1,28 @@
+html {
+  min-height: 100%;
+  background-color: #f5f4f4;
+  padding: 0 0;
+  margin: 0 0;
+  font-size: 14px
+}
+
+.header{
+  height: 155px;
+  text-align: center;
+  color: #f64060;
+  font-size: 90px;
+  font-family: 'Beth Ellen', cursive;
+  margin: 0 ;
+  background-color: #ffffff;
+}
+
+.headerSpan{
+  font-size: 9px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .App {
   text-align: center;
-  padding: 2% 5%;
 }
 
 .App * {
@@ -8,7 +30,7 @@
 }
 
 ul {
-  padding: 0;
+  padding: 0 20px 0 20px;
   list-style: none;
 }
 
@@ -34,6 +56,7 @@ input[type="text"], input[type="number"] {
 .CitySearch {
   display: flex;
   flex-direction: column;
+  padding-top: 10px;
 }
 
 .suggestions {
@@ -65,6 +88,7 @@ input[type="text"], input[type="number"] {
   margin-bottom: 10px;
   text-align: left;
   border: 1px solid #ccc;
+  background-color: white;
   border-radius: 4px;
   position: relative;
 }
@@ -97,8 +121,13 @@ input[type="text"], input[type="number"] {
   overflow-x: hidden;
 }
 
+label {
+width: 100%;
+padding: 0 0 0 2px;
+}
+
 .number-of-events {
-  width: 80px;
-  margin: 20px 0 50px;
-  text-align: right;
+  width: 35%;
+  margin: 20px 0 50px 20px;
+  text-align: left;
 }
