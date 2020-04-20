@@ -39,7 +39,7 @@ module.exports.refreshAccessToken = async (event) => {
     statusCode: 200,
     headers: {
       'Content-Type': 'application/json',
-      "Access-Control-Allow-Origin": "*"
+      'Access-Control-Allow-Origin': '*'
     },
     body: JSON.stringify({
       access_token: info.data.access_token,
