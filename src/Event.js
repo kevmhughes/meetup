@@ -18,6 +18,7 @@ class Event extends Component {
 
   render() {
       const showDetails = this.state.showDetails;
+      const event = this.props.event;
       
     return (
       <div className="event">
@@ -37,7 +38,7 @@ class Event extends Component {
 
           {showDetails &&
           <div className="event-details">
-            <p className="description">{this.props.event.description}</p>
+            <div className="description" dangerouslySetInnerHTML={{__html: event.description}} />
           </div>
           }
 

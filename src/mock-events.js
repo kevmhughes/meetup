@@ -52,7 +52,7 @@ const mockEvents = {
         timezone: "Europe/Berlin"
         },
         link: "https://www.meetup.com/de-DE/jug-hamburg/events/263370107/",
-        description: "Good times to be had",
+        description: '<p>(This event is co-organized with the Rust User Group: <a href="https://www.meetup.com/de-DE/rust-munich/events/259984522/" class="linkified">https://www.meetup.com/de-DE/rust-munich/events/259984522/</a>)</p> <p>IPFS is meant to be not just a number of programs from protocol labs, but a set of cleanly specified open protocols that can be implemented in many different languages for everybody that needs a peer to peer networking stack to write p2p applications.</p> <p>Pierre Krieger, also known as tomaka on github and twitter, is going to talk about the rust implementation of libp2p that is being developed for parity.io.</p> ',
         visibility: "public",
         member_pay_fee: false
       }
