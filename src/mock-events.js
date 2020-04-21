@@ -19,7 +19,7 @@ const mockEvents = {
         date_in_series_pattern: false,
         status: "upcoming",
         time: 1566925200000,
-        local_date: "2019-08-27",
+        local_date: "2020-04-27",
         local_time: "19:00",
         updated: 1563825339000,
         utc_offset: 7200000,
