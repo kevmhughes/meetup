@@ -26,7 +26,7 @@ class Event extends Component {
             <p className="time">{this.props.event.local_time} - {this.props.event.local_date}</p>
             <p className="name">{this.props.event.name}</p>
             <p className="group-name">{this.props.event.group.name}</p>
-            <p className="going">{this.props.event.yes_rsvp_count}</p>
+            <p className="going">Going: {this.props.event.yes_rsvp_count}</p>
 
           {showDetails &&
             <button className="details-btn" onClick={() => this.handleShowDetails()}>hide details</button>

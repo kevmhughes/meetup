@@ -16,11 +16,6 @@ html {
   background-color: #ffffff;
 }
 
-.headerSpan{
-  font-size: 9px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 .App {
   text-align: center;
 }
@@ -30,7 +25,9 @@ html {
 }
 
 ul {
-  padding: 0 20px 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
   list-style: none;
 }
 
@@ -57,6 +54,7 @@ input[type="text"], input[type="number"] {
   display: flex;
   flex-direction: column;
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .suggestions {
@@ -83,8 +81,14 @@ input[type="text"], input[type="number"] {
   background-color: #BCDCDB;
 }
 
+.time {
+  color: #31b0d5;
+  background-image: none;;
+  font-weight: 800;
+}
+
 .event {
-  padding: 10px 10px 20px;
+  padding: 20px 30px 40px 30px;
   margin-bottom: 10px;
   text-align: left;
   border: 1px solid #ccc;
@@ -94,13 +98,23 @@ input[type="text"], input[type="number"] {
 }
 
 .details-btn {
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
-  padding: 5px 8px;
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
+    position: absolute;
+    right: 7px;
+    bottom: 8px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--color-white);
+    border: 1px solid;
+    border-color: #31b0d5;
+    color: #656666;
+    fill: var(--color-viridian);
+}
+
+.details-btn:hover {
+  color: white;
+  background-color: #31b0d5;
 }
 
 .name {
@@ -123,11 +137,15 @@ input[type="text"], input[type="number"] {
 
 label {
 width: 100%;
-padding: 0 0 0 2px;
+text-align: center;
 }
 
 .number-of-events {
-  width: 200px;
-  margin: 20px 0 50px 20px;
+  display: flex;
+  flex-direction: column;
   text-align: left;
+}
+
+img {
+  max-width: 450px
 }

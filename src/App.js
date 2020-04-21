@@ -40,7 +40,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1 className = "header">Meetup<span className="headerSpan"> ... a clone</span></h1>
+        <h1 className = "header">Meetup</h1>
         <CitySearch updateEvents={this.updateEvents} />
         <NumberOfEvents updateEvents={this.updateEvents}/>
         <EventList events={this.state.events} />
