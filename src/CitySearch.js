@@ -1,14 +1,28 @@
 import React, { Component } from 'react';
 import { getSuggestions } from './api';
-import { InfoAlert } from './Alert';
+import { InfoAlert, OfflineAlert } from './Alert';
 
 class CitySearch extends Component {
 
   state = {
     query: '',
     suggestions: [],
-    infoText: ''
+    infoText: '',
+    offlineText: ''
   }
+
+  offLineAlert = () => {
+    if(navigator.onLine === false) {
+      this.setState({
+        offlineText: 'You appear to be offline, this list is cached. Please connect to the internet for an updated list.'
+      });
+    } else {
+      this.setState({
+        offlineText: '',
+      });
+    }
+  }
+
 
   handleInputChanged = (event) => {
     const value = event.target.value;
@@ -37,6 +51,9 @@ class CitySearch extends Component {
     return (
       <div className="CitySearch">
         <h1>Choose a city to check out its events </h1>
+        <div className="offline-alert">
+        <OfflineAlert text={this.state.offlineText} />
+        </div>
         <div className="info-alert">
         <InfoAlert text={this.state.infoText} />
         </div>
