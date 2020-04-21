@@ -157,6 +157,15 @@ img {
   padding: 0;
 }
 
+.error-alert {
+  height: 10px;
+  margin-bottom: 15px;
+}
+
+.info-alert {
+  height: 10px;
+}
+
 @media screen and (max-width: 1024px) {
   .EventList {
     padding: 0 10%;
