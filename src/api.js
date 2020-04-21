@@ -10,7 +10,7 @@ async function getOrRenewAccessToken(type, key) {
       + key;
   } else if (type === 'renew') {
     // Lambda endpoint to get token by refresh_token
-    url = 'https://ln37ouztc7.execute-api.eu-central-1.amazonaws.com/dev/api/refresh/'
+    url = 'https://ln37ouztc7.execute-api.eu-central-1.amazonaws.com/dev/api/refresh_token/'
       + key;
   }
 
@@ -89,14 +89,19 @@ async function getSuggestions(query) {
       + query
       + '&access_token=' + token;
     const result = await axios.get(url);
-    return result.data;
+    return result.data.events;
   }
   return [];
 }
 
-  async function getEvents(lat, lon) {
+  async function getEvents(lat, lon, page) {
     if (window.location.href.startsWith('http://localhost')) {
     return mockEvents.events;
+  }
+
+  if (!navigator.onLine) {
+    const events = localStorage.getItem('lastEvents');
+    return JSON.parse(events);
   }
 
   const token = await getAccessToken();
@@ -107,10 +112,13 @@ async function getSuggestions(query) {
     if (lat && lon) {
       url += '&lat=' + lat + '&lon=' + lon;
     }
+    if (page) {
+      url += '&page=' + page;
+    }
     const result = await axios.get(url);
     return result.data.events;
   }
 
 }
 
-  export { getSuggestions, getEvents };
+  export { getSuggestions, getEvents, getAccessToken };
