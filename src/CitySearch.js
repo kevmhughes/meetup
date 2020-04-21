@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getSuggestions } from './api';
-import { InfoAlert, OfflineAlert } from './Alert';
+import { InfoAlert } from './Alert';
 
 class CitySearch extends Component {
 
@@ -8,22 +8,12 @@ class CitySearch extends Component {
     query: '',
     suggestions: [],
     infoText: '',
-    offlineText: ''
   }
 
 
   handleInputChanged = (event) => {
     const value = event.target.value;
     this.setState({ query: value });
-
-    if (!navigator.onLine)
-    {
-      this.props.updateEvents({ warningText: "You are currently offline, events are loaded from last session" });
-    }
-    else
-    {
-      this.props.updateEvents({ warningText: "" })
-    }
   
     getSuggestions(value).then(suggestions => {
       this.setState({ suggestions });
@@ -49,9 +39,6 @@ class CitySearch extends Component {
     return (
       <div className="CitySearch">
         <h1>Choose a city to check out its events </h1>
-        <div className="offline-alert">
-        <OfflineAlert text={this.state.offlineText} />
-        </div>
         <div className="info-alert">
         <InfoAlert text={this.state.infoText} />
         </div>
