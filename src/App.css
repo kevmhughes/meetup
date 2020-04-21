@@ -133,6 +133,7 @@ input[type="text"], input[type="number"] {
 
 .description {
   overflow-x: hidden;
+  padding-top: 10px;
 }
 
 label {
@@ -147,5 +148,7 @@ text-align: center;
 }
 
 img {
-  max-width: 450px
+    max-width: 450px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
