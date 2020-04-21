@@ -11,22 +11,20 @@ class CitySearch extends Component {
     offlineText: ''
   }
 
-  offLineAlert = () => {
-    if(navigator.onLine === false) {
-      this.setState({
-        offlineText: 'You appear to be offline, this list is cached. Please connect to the internet for an updated list.'
-      });
-    } else {
-      this.setState({
-        offlineText: '',
-      });
-    }
-  }
-
 
   handleInputChanged = (event) => {
     const value = event.target.value;
     this.setState({ query: value });
+
+    if (!navigator.onLine)
+    {
+      this.props.updateEvents({ warningText: "You are currently offline, events are loaded from last session" });
+    }
+    else
+    {
+      this.props.updateEvents({ warningText: "" })
+    }
+  
     getSuggestions(value).then(suggestions => {
       this.setState({ suggestions });
 
