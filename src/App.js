@@ -18,7 +18,8 @@ class App extends Component {
     page: null,
     defaultCity: '',
     lat: null,
-    lon: null
+    lon: null,
+    offlineText: ''
   };
   
   offLineAlert = () => {
