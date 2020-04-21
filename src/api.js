@@ -27,19 +27,15 @@ async function getSuggestions(query) {
   }
 
   const token = await getAccessToken();
-
   if (token) {
     const url = 'https://api.meetup.com/find/locations?&sign=true&photo-host=public&query='
       + query
       + '&access_token=' + token;
     const result = await axios.get(url);
-    const events = result.data.events;
-
-    return events;
+    return result.data;
   }
-
   return [];
-};
+}
 
 async function getEvents(lat, lon, page) {
   if (window.location.href.startsWith('http://localhost')) {
