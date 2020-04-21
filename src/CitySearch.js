@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getSuggestions } from './api';
-{ InfoAlert } from './Alert';
+import { InfoAlert } from './Alert';
 
 class CitySearch extends Component {
 
