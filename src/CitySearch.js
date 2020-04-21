@@ -8,6 +8,7 @@ class CitySearch extends Component {
     query: '',
     suggestions: [],
     infoText: '',
+    offlineText: ''
   }
 
 
@@ -15,6 +16,15 @@ class CitySearch extends Component {
     const value = event.target.value;
     this.setState({ query: value });
   
+    if (!navigator.onLine)
+    {
+      this.props.updateEvents({ offlineText: "You are currently offline, events are loaded from last session" });
+    }
+    else
+    {
+      this.props.updateEvents({ offlineText: "" })
+    }
+
     getSuggestions(value).then(suggestions => {
       this.setState({ suggestions });
 

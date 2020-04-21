@@ -22,19 +22,16 @@ class App extends Component {
     offlineText: '',
   };
   
-  offLineAlert = () => {
-    if(navigator.onLine === false) {
-      this.setState({
-        offlineText: 'You appear to be offline, this list is cached. Please connect to the internet for an updated list.'
-      });
-    } else {
-      this.setState({
-        offlineText: '',
-      });
-    }
-  }
 
   updateEvents = (lat, lon, page) => {
+    if (!navigator.onLine)
+    {
+    this.setState({offlineText: "You are currently offline, events are loaded from last session" });
+    }
+    else
+    {
+      this.setState({ offlineText: "" })
+    }
     if (lat && lon) {
       getEvents(lat, lon, this.state.page).then(response =>
         this.setState({ events: response, lat, lon })
@@ -54,7 +51,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className = "header">Meetup</h1>
+        <div classNme="offline-alert">
         <OfflineAlert text={this.state.offlineText} />
+        </div>
         <CitySearch updateEvents={this.updateEvents} />
         <NumberOfEvents updateEvents={this.updateEvents}/>
         <EventList events={this.state.events} />
