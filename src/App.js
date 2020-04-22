@@ -8,7 +8,7 @@ import { getEvents } from './api';
 import { OfflineAlert } from './Alert';
 import moment from 'moment';
 import {
-  ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
+  ScatterChart, Scatter, Label, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
 } from 'recharts';
 
 class App extends Component {
@@ -91,8 +91,9 @@ class App extends Component {
           }}
         >
           <CartesianGrid />
-          <XAxis type="category" dataKey="date" name="date" />
-          <YAxis allowDecimals={false} type="number" dataKey="number" name="number of events" />
+          <XAxis type="category" dataKey="date" name="date" label={{ value: 'this week', position: 'bottom' }}/>
+          <YAxis allowDecimals={false} type="number" dataKey="number" name="number of events" 
+          label={{ value: 'events', angle: -90, position: 'insideLeft' }}/>
           <Tooltip cursor={{ strokeDasharray: '3 3' }} />
           <Scatter data={this.getData()} fill="#8884d8" />
         </ScatterChart>

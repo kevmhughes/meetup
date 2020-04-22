@@ -172,6 +172,10 @@ img {
   margin-bottom: 15px;
 }
 
+.tooltip {
+  text-align: center;
+}
+
 
 @media screen and (max-width: 1024px) {
   .EventList {
