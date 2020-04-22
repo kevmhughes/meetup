@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {ResponsiveContainer, PieChart, Pie, Legend, Tooltip, Cell, Line} from "recharts";
 
 
 class Event extends Component {
@@ -16,9 +17,22 @@ class Event extends Component {
         }
       }
 
+      getData() {
+        let peopleGoing = this.props.event.yes_rsvp_count;
+        let spotsAvailable =
+          this.props.event.rsvp_limit - this.props.event.yes_rsvp_count;
+    
+        return [
+          { name: "Attending", value: peopleGoing },
+          { name: "Places free", value: spotsAvailable }
+        ];
+      }
+    
+
   render() {
       const showDetails = this.state.showDetails;
       const event = this.props.event;
+      let colors = ["#e34542", "#43e06d"]
       
     return (
       <div className="event">
@@ -37,8 +51,30 @@ class Event extends Component {
         </div>
 
           {showDetails &&
-          <div className="event-details">
-            <div className="description" dangerouslySetInnerHTML={{__html: event.description}} />
+         <div className="event-details">
+         <hr/>
+         {this.props.event.rsvp_limit ? (
+           <ResponsiveContainer height={250}>
+           <PieChart width={200} height={200}>
+             <Pie isAnimationActive={false} data={this.getData()} dataKey="value" cx="50%" cy="50%" outerRadius={80} label> 
+               { 
+                 this.getData().map((entry, index) => (
+                   <Cell key={`cell-${index}`} fill={colors[index]}/>
+                 ))
+               }
+             </Pie>
+             <Tooltip />
+             <Legend verticalAlign="top" height={30}> 
+               <Line name="Attending" type="monotone" dataKey="spotsTaken" stroke="#8884d8" />
+               <Line name="Spots Open" type="monotone" dataKey="spotsFree" stroke="#82ca9d" />
+             </Legend>
+           </PieChart>
+         </ResponsiveContainer>
+         ):(
+           ""
+         )           
+         }
+            <div className="description" dangerouslySetInnerHTML={{__html: event.description}}/>
           </div>
           }
 

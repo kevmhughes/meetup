@@ -79,7 +79,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className = "header">Meetup</h1>
-        <div classNme="offline-alert">
+        <div className="offline-alert">
         <OfflineAlert text={this.state.offlineText} />
         </div>
         <CitySearch updateEvents={this.updateEvents} />
