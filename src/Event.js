@@ -54,9 +54,9 @@ class Event extends Component {
          <div className="event-details">
          <hr/>
          {this.props.event.rsvp_limit ? (
-           <ResponsiveContainer height={250}>
-           <PieChart width={200} height={200}>
-             <Pie isAnimationActive={false} data={this.getData()} dataKey="value" cx="50%" cy="50%" outerRadius={80} label> 
+           <ResponsiveContainer height={200}>
+           <PieChart width={100} height={100}>
+             <Pie isAnimationActive={false} data={this.getData()} dataKey="value" cx="50%" cy="50%" outerRadius={40} label> 
                { 
                  this.getData().map((entry, index) => (
                    <Cell key={`cell-${index}`} fill={colors[index]}/>

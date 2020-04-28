@@ -177,7 +177,7 @@ img {
   position: relative;
   text-align: left;
   top: 60px;
-  right: -11px;
+  padding-left: 11px;
 }
 
 .offline-alert {
