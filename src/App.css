@@ -7,10 +7,9 @@ html {
 }
 
 .header{
-  height: 155px;
+  height: 60px;
   text-align: center;
   color: #f64060;
-  font-size: 90px;
   font-family: 'Beth Ellen', cursive;
   margin: 0 ;
   background-color: #ffffff;
@@ -42,8 +41,8 @@ input[type="text"], input[type="number"] {
   border: 1px solid #ccc;
   font-size: 14px;
   line-height: 20px;
-  align-self: center;
   height: 38px;
+  margin: -13px 10px 2px 10px;
 }
 
 .city {
@@ -52,16 +51,20 @@ input[type="text"], input[type="number"] {
 
 .CitySearch {
   display: flex;
-  flex-direction: column;
-  padding-top: 10px;
-  padding-bottom: 10px;
+    flex-direction: column;
+    background-color: black;
+    max-width: 892px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
 }
 
 .suggestions {
   width: 250px;
-  align-self: center;
   margin: 0;
   font-size: 14px;
+  padding-bottom: 10px;
+  padding-left: 21px;
 }
 
 .suggestions > li {
@@ -138,13 +141,17 @@ input[type="text"], input[type="number"] {
 }
 
 label {
-width: 100%;
-text-align: center;
+  width: 100%;
+  text-align: left;
+  padding: 7px 3px 17px 16px;
 }
 
 .number-of-events {
   display: flex;
   flex-direction: column;
+  width: 200px;
+  margin-top: 10px;
+  padding-bottom: 10px;
 }
 
 img {
@@ -159,12 +166,18 @@ img {
 
 .error-alert {
   height: 10px;
-  margin-bottom: 15px;
+  width: 250px;
+  position: relative;
+  top: 73px;
 }
 
 .info-alert {
   height: 10px;
   margin-bottom: 15px;
+  position: relative;
+  text-align: left;
+  top: 60px;
+  right: -11px;
 }
 
 .offline-alert {
@@ -176,6 +189,38 @@ img {
   text-align: center;
 }
 
+.prebody {
+  height: 150px;
+  background-color: rgb(5, 63, 83);
+  padding-top: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+.logo {
+  height: 60px;
+    float: left;
+    padding: 10px 10px 10px 14px;
+}
+
+.chart-div {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 22px 0px 10px 0px;
+}
+
+.recharts-label {
+  font-size: 20px;
+}
+
+.n-o-events {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 @media screen and (max-width: 1024px) {
   .EventList {
@@ -188,4 +233,22 @@ img {
   height: 103px;
   font-size: 56px;
   } 
+}
+
+@media screen and (max-width: 950px) {
+  .chart-div {
+    display: none;  
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .n-o-events {
+ width: 0;
+ margin: 0;
+  }
+}
+@media screen and (max-width: 420px) {
+  .header {
+height: 60px;
+  }
 }

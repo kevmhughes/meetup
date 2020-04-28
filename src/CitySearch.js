@@ -48,13 +48,12 @@ class CitySearch extends Component {
   render() {
     return (
       <div className="CitySearch">
-        <h1>Choose a city to check out its events </h1>
         <div className="info-alert">
         <InfoAlert text={this.state.infoText} />
         </div>
         <input
           type="text"
-          placeholder="Your chosen city"
+          placeholder="Search"
           className="city"
           value={this.state.query}
           onChange={this.handleInputChanged}

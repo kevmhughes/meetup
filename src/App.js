@@ -10,6 +10,7 @@ import moment from 'moment';
 import {
   ScatterChart, Scatter, Label, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
 } from 'recharts';
+import logo from './img/meetup.svg'; // with import
 
 class App extends Component {
   
@@ -78,12 +79,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1 className = "header">Meetup</h1>
+        <div className = "header"><img className="logo" src={logo} alt="meetup logo"></img></div>
+        <div className="prebody"><h1>Find your next event</h1></div>
+        <CitySearch updateEvents={this.updateEvents} />
+        <div className="n-o-events">
+        <NumberOfEvents updateEvents={this.updateEvents}/>
+        </div>
         <div className="offline-alert">
         <OfflineAlert text={this.state.offlineText} />
         </div>
-        <CitySearch updateEvents={this.updateEvents} />
-        <NumberOfEvents updateEvents={this.updateEvents}/>
+        <div className="chart-div">
         <ResponsiveContainer height={400}>
         <ScatterChart
           margin={{
@@ -98,6 +103,7 @@ class App extends Component {
           <Scatter data={this.getData()} fill="#8884d8" />
         </ScatterChart>
         </ResponsiveContainer>
+        </div>
         <EventList events={this.state.events} />
       </div>
     );
