@@ -1,6 +1,6 @@
 # Meetup
 
-Take a Look at the App [here](https://kevmhughes.github.io/meetup/)
+Take a look at the app [here](https://kevmhughes.github.io/meetup/)
 
 # Description
 
