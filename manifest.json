@@ -1,6 +1,6 @@
 {
-  "short_name": "Meetup",
-  "name": "Meetup Application",
+  "short_name": "meetup",
+  "name": "meetup Application",
   "icons": [
     {
       "src": "icon.png",
