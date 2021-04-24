@@ -18,7 +18,7 @@ class CitySearch extends Component {
   
     if (!navigator.onLine)
     {
-      this.props.updateEvents({ offlineText: "You are currently offline, events are loaded from last session" });
+      this.props.updateEvents({ offlineText: "You are currently offline." });
     }
     else
     {
@@ -30,7 +30,7 @@ class CitySearch extends Component {
 
       if (value && suggestions.length === 0) {
         this.setState({
-          infoText: 'We can not find the city you are looking for. Please try another city',
+          infoText: 'We cannot find your choice. Please try again.',
         });
       } else {
         this.setState({
