@@ -9,7 +9,7 @@
 * can filter a city, or town, of choice to see current events in that location.
 * can define the number of current events they choose to see.
 * can see the breakdown of the number of events over the following 7 days in a scatter graph.
-* see/hide more specific details about an event of interest.
+* can see/hide more specific details about an event of interest.
 * can visualize the number of atendees/free places at the event in a pie chart.
 * can use the app offline
 
