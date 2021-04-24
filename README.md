@@ -2,7 +2,7 @@
 
 Take a Look at the App [here](https://kevmhughes.github.io/meetup/)
 
-### Description
+# Description
 
 
 **Meetup** is a responsive **PWA** built with the **React** framework. This application feeds off the official Meetup API, displaying current events in a city, or town, of choice as defined by the user. 
