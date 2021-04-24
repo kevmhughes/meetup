@@ -26,7 +26,7 @@ Take a look at the app [here](https://kevmhughes.github.io/meetup/)
 * can see the breakdown of the number of events over the following 7 days in a scatter graph.
 * can see/hide more specific details about an event of interest.
 * can visualize the number of atendees/free places at the event in a pie chart.
-* can use the app offline
+* can use the app offline.
 
 
 
