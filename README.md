@@ -19,14 +19,14 @@ Take a look at the app [here](https://kevmhughes.github.io/meetup/)
 
 # Features
 
-### Users:
+### Users are able to:
 
-* can filter a city, or town, of choice to see current events in that location.
-* can define the number of current events they choose to see.
-* can see the breakdown of the number of events over the following 7 days in a scatter graph.
-* can see/hide more specific details about an event of interest.
-* can visualize the number of atendees/free places at the event in a pie chart.
-* can use the app offline.
+* filter a city, or town, of choice to see current events in that location.
+* define the number of current events they choose to see.
+* see the breakdown of the number of events over the following 7 days in a scatter graph.
+* see/hide more specific details about an event of interest.
+* visualize the number of atendees/free places at the event in a pie chart.
+* use the app offline.
 
 
 
