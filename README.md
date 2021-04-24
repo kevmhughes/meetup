@@ -1,4 +1,7 @@
 # Meetup
+
+Take a Look at the App [here](https://kevmhughes.github.io/meetup/)
+
 ### Description
 
 
@@ -25,7 +28,7 @@
 * can visualize the number of atendees/free places at the event in a pie chart.
 * can use the app offline
 
-# Take a Look at the App [here](https://kevmhughes.github.io/meetup/)
+
 
 
 
